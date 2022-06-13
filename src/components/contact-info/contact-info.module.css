@@ -1,0 +1,95 @@
+.contact {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 50%;
+}
+
+.contact > p {
+    color: #535351;
+    cursor: pointer;
+    border-bottom: 1px dotted gray;
+    padding: 4px 8px;
+}
+
+.popUp {
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    height: 210px;
+    width: calc(100% - 32px);
+    background-color: #eeeeee;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px 5px #BDBDBD;
+    transition: opacity 200ms ease-in-out;
+}
+
+.popUp .close {
+    font-size: 20px;
+    padding: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+.popUp .content {
+    display: flex;
+    padding: 16px 52px 16px;
+}
+
+.popUp .content img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: 16px;
+}
+
+.popUp .content h2 {
+    color: #a8a8a8;
+}
+
+.popUp .content .info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.popUp .content .info p,.popUp .content .info a {
+    color: #484848;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popUp .content .info p:nth-child(2n+1) {
+    width: 30%;
+    font-weight: bold;
+}
+
+.popUp .content .info p:nth-child(2n),.popUp .content .info a {
+    width: 70%;
+}
+
+.popUp .ribbon {
+    background: #B92E2E;
+    background: linear-gradient(135deg, #B92E2E 0%, #FF3333 50%, #FF792F 100%);
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    padding: 4px 8px;
+    transform: rotate(-90deg) scale(-1) translateX(100%);
+    transform-origin: 100% 0;
+    box-shadow: 5px -5px 5px 0 #999999;
+}
+
+.popUp .ribbon p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+}

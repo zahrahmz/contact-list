@@ -1,0 +1,44 @@
+.phoneBook {
+    width: 100%;
+    padding-top: 40px;
+}
+
+.tabsWrapper {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tabsWrapper .tab {
+    flex: 1;
+    min-width: 36px;
+    margin-top: -4px;
+}
+
+.tabsWrapper .tab button {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.tabsWrapper .tab button small {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    font-size: 12px;
+}
+
+.contactsWrapper {
+    overflow: auto;
+    height: calc(100vh - 100px);
+    background-color: #eeeeee;
+    border-radius: 0 0 8px 8px;
+    padding: 40px 24px;
+    box-shadow: 0 0 5px 0 #999999;
+}
