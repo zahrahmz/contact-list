@@ -4,7 +4,7 @@
     margin-bottom: 8px;
     padding-left: 16px;
     padding-right: 16px;
-    width: 50%;
+    width: 100%;
 }
 
 .contact > p {
@@ -32,22 +32,26 @@
     padding: 4px;
     cursor: pointer;
     position: absolute;
-    top: 0;
-    left: 10px;
+    top: -4px;
+    left: 8px;
 }
 
 .popUp .content {
     display: flex;
-    padding: 16px 52px 16px;
+    padding: 16px 48px 16px 24px;
 }
 
 .popUp .content img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     flex-shrink: 0;
-    margin-right: 16px;
+    margin-right: 8px;
+}
+
+.popUp > div {
+    min-width: 0;
 }
 
 .popUp .content h2 {
@@ -68,12 +72,12 @@
 }
 
 .popUp .content .info p:nth-child(2n+1) {
-    width: 30%;
+    width: 40%;
     font-weight: bold;
 }
 
 .popUp .content .info p:nth-child(2n),.popUp .content .info a {
-    width: 70%;
+    width: 60%;
 }
 
 .popUp .ribbon {
@@ -81,8 +85,8 @@
     background: linear-gradient(135deg, #B92E2E 0%, #FF3333 50%, #FF792F 100%);
     position: absolute;
     top: -10px;
-    right: 20px;
-    padding: 4px 8px;
+    right: 16px;
+    padding: 4px;
     transform: rotate(-90deg) scale(-1) translateX(100%);
     transform-origin: 100% 0;
     box-shadow: 5px -5px 5px 0 #999999;
@@ -92,4 +96,26 @@
     font-size: 14px;
     font-weight: 500;
     color: #ffffff;
+}
+
+@media screen and (min-width: 767px) {
+    .contact {
+        width: 50%;
+    }
+    .popUp .content img {
+        width: 100px;
+        height: 100px;
+        margin-right: 16px;
+    }
+    .popUp .ribbon {
+        padding: 4px 8px;
+    }
+
+    .popUp .content .info p:nth-child(2n+1) {
+        width: 30%;
+    }
+
+    .popUp .content .info p:nth-child(2n),.popUp .content .info a {
+        width: 70%;
+    }
 }

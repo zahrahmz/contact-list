@@ -8,7 +8,7 @@ function ContactInfo(props) {
     const {location, name, email, phone, picture, login} = props.contact;
     useEffect(() => {
         document.addEventListener('click', (event) => {
-            if (ref.current.contains(event.target) && !closeBtn.current.contains(event.target)) {
+            if (ref?.current?.contains(event.target) && !closeBtn?.current?.contains(event.target)) {
                 setShowDetails(true)
             } else {
                 setShowDetails(false)

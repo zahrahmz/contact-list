@@ -20,6 +20,7 @@
     width: 100%;
     padding: 8px 12px;
     border: 1px solid #cfcfcf;
+    border-bottom: none;
     border-radius: 8px 8px 0 0;
     cursor: pointer;
     position: relative;
@@ -29,9 +30,10 @@
 
 .tabsWrapper .tab button small {
     position: absolute;
-    bottom: 4px;
-    right: 4px;
-    font-size: 12px;
+    bottom: 2px;
+    right: 2px;
+    font-size: 10px;
+    color: gray;
 }
 
 .contactsWrapper {
@@ -39,6 +41,23 @@
     height: calc(100vh - 100px);
     background-color: #eeeeee;
     border-radius: 0 0 8px 8px;
-    padding: 40px 24px;
+    padding: 24px 0;
     box-shadow: 0 0 5px 0 #999999;
+    border: 1px solid #cfcfcf;
+    border-top: none;
+}
+
+.error {
+    color: #cc0000;
+    background-color: #ffe6e6;
+    box-shadow: 0 0 5px 0 #999999;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 767px) {
+    .contactsWrapper {
+        padding: 40px 24px;
+    }
 }
