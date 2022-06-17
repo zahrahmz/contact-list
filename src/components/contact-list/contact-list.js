@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
 import classes from './contact-list.module.css';
 import ContactInfo from "../contact-info/contact-info";
+import Loading from "../loading/loading";
 import axios from "axios";
-import {Loading} from "../loading/loading";
 
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-function ContactList(props) {
+function ContactList() {
     const [contacts, setContacts] = useState(alphabet.reduce((o, key) => ({...o, [key]: []}), {}));
     const [filter, setFilter] = useState('a');
     const [loading, setLoading] = useState(true);
@@ -18,7 +18,6 @@ function ContactList(props) {
         }, {})
     };
     useEffect(() => {
-        console.log('check');
         axios.get('https://randomuser.me/api/?nat=us,br,ca,gb&results=500')
             .then(({data}) => {
                 const {results} = data;
